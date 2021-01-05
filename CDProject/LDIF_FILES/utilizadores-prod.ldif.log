@@ -1,0 +1,224 @@
+# File utilizadores.ldif
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.636
+dn: ou=prod,dc=example,dc=com
+objectclass: organizationalUnit
+objectclass: top
+ou: prod
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.650
+dn: ou=admin,ou=prod,dc=example,dc=com
+objectclass: organizationalUnit
+objectclass: top
+ou: admin
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.661
+dn: uid=101010,ou=admin,ou=prod,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+displayName: Major Victory
+cn: Vance Astro
+sn: Astro
+uid: 101010
+userpassword: qwerty
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.671
+dn: ou=people,ou=prod,dc=example,dc=com
+objectclass: organizationalUnit
+objectclass: top
+ou: people
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.682
+dn: uid=2131456,ou=people,ou=prod,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Black Bolt
+sn: Bolt
+uid: 2131456
+userpassword: qwerty
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.692
+dn: uid=2233322,ou=people,ou=prod,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Black Knight
+sn: Knight
+uid: 2233322
+userpassword: qwerty
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.702
+dn: uid=2177888,ou=people,ou=prod,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Captain Napalm
+sn: Napalm
+uid: 2177888
+userpassword: qwerty
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.713
+dn: uid=2344442,ou=people,ou=prod,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Captain Planet
+sn: Planet
+uid: 2344442
+userpassword: qwerty
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.723
+dn: uid=2122119,ou=people,ou=prod,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Daimon Hellstrom
+sn: Hellstrom
+uid: 2122119
+userpassword: qwerty
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.734
+dn: uid=2122116,ou=people,ou=prod,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Danny Phantom
+sn: Phantom
+uid: 2122116
+userpassword: qwerty
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.744
+dn: uid=2111188,ou=people,ou=prod,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Flash Bomba
+sn: Bomba
+uid: 2111188
+userpassword: qwerty
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.754
+dn: uid=2121199,ou=people,ou=prod,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Flash Gordon
+sn: Gordon
+uid: 2121199
+userpassword: qwerty
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.764
+dn: uid=2211198,ou=people,ou=prod,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Franklin Richards
+sn: Richards
+uid: 2211198
+userpassword: qwerty
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.776
+dn: uid=2299992,ou=people,ou=prod,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Ice Man
+sn: Man
+uid: 2299992
+userpassword: qwerty
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.789
+dn: uid=2511211,ou=people,ou=prod,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Jung-Gwok Chiu-Yan
+sn: Chiu-Yan
+uid: 2511211
+userpassword: qwerty
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.800
+dn: uid=2666286,ou=people,ou=prod,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Natalia Romanova
+sn: Romanova
+uid: 2666286
+userpassword: qwerty
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.811
+dn: uid=2511151,ou=people,ou=prod,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Pete Wisdom
+sn: Wisdom
+uid: 2511151
+userpassword: qwerty
+
+#!RESULT OK
+#!CONNECTION ldap://localhost:10389
+#!DATE 2020-12-28T15:17:50.822
+dn: uid=2133331,ou=people,ou=prod,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Rusty Collins
+sn: Collins
+uid: 2133331
+userpassword: qwerty
+
+
+

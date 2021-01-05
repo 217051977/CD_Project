@@ -1,0 +1,170 @@
+# File utilizadores.ldif
+
+dn: ou=dev,dc=example,dc=com
+objectclass: organizationalUnit
+objectclass: top
+ou: dev
+
+dn: ou=admin,ou=dev,dc=example,dc=com
+objectclass: organizationalUnit
+objectclass: top
+ou: admin
+
+dn: uid=101010,ou=admin,ou=dev,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+displayName: Major Victory
+cn: Vance Astro
+sn: Astro
+uid: 101010
+userpassword: qwerty
+
+dn: ou=people,ou=dev,dc=example,dc=com
+objectclass: organizationalUnit
+objectclass: top
+ou: people
+
+dn: uid=2131456,ou=people,ou=dev,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Black Bolt
+sn: Bolt
+uid: 2131456
+userpassword: qwerty
+
+dn: uid=2233322,ou=people,ou=dev,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Black Knight
+sn: Knight
+uid: 2233322
+userpassword: qwerty
+
+dn: uid=2177888,ou=people,ou=dev,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Captain Napalm
+sn: Napalm
+uid: 2177888
+userpassword: qwerty
+
+dn: uid=2344442,ou=people,ou=dev,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Captain Planet
+sn: Planet
+uid: 2344442
+userpassword: qwerty
+
+dn: uid=2122119,ou=people,ou=dev,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Daimon Hellstrom
+sn: Hellstrom
+uid: 2122119
+userpassword: qwerty
+
+dn: uid=2122116,ou=people,ou=dev,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Danny Phantom
+sn: Phantom
+uid: 2122116
+userpassword: qwerty
+
+dn: uid=2111188,ou=people,ou=dev,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Flash Bomba
+sn: Bomba
+uid: 2111188
+userpassword: qwerty
+
+dn: uid=2121199,ou=people,ou=dev,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Flash Gordon
+sn: Gordon
+uid: 2121199
+userpassword: qwerty
+
+dn: uid=2211198,ou=people,ou=dev,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Franklin Richards
+sn: Richards
+uid: 2211198
+userpassword: qwerty
+
+dn: uid=2299992,ou=people,ou=dev,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Ice Man
+sn: Man
+uid: 2299992
+userpassword: qwerty
+
+dn: uid=2511211,ou=people,ou=dev,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Jung-Gwok Chiu-Yan
+sn: Chiu-Yan
+uid: 2511211
+userpassword: qwerty
+
+dn: uid=2666286,ou=people,ou=dev,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Natalia Romanova
+sn: Romanova
+uid: 2666286
+userpassword: qwerty
+
+dn: uid=2511151,ou=people,ou=dev,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Pete Wisdom
+sn: Wisdom
+uid: 2511151
+userpassword: qwerty
+
+dn: uid=2133331,ou=people,ou=dev,dc=example,dc=com
+objectclass: inetOrgPerson
+objectclass: organizationalPerson
+objectclass: person
+objectclass: top
+cn: Rusty Collins
+sn: Collins
+uid: 2133331
+userpassword: qwerty
+
+
+
