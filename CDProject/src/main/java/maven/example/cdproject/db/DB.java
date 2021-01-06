@@ -97,6 +97,26 @@ public class DB {
 		}
 	}
 	
+	public void getVotingItems(String dataBaseName) {
+		createDatabaseInstance(dataBaseName);
+		boolean outOfBounds = false;
+		int i = 0;
+		FileItem fileItem;
+		try {
+			while (!outOfBounds) {
+				if ( i != 0) {
+					
+					fileItem = (FileItem) db.find(FileItem.class, "" + i);
+					System.out.println("(" + fileItem.get_id() + ") " + fileItem.getName());
+				}
+				i++;
+			}
+			
+		} catch (Exception e) {
+			outOfBounds = true;
+		}
+	}
+	
 	public FileItem getDocByName(String dataBaseName, String docName) {
 		createDatabaseInstance(dataBaseName);
 		boolean outOfBounds = false;
@@ -201,7 +221,6 @@ public class DB {
 		db.save(fr);
 	}
 	
-
 	public void voteItem(String dataBaseName, String itemId) {
 		createDatabaseInstance(dataBaseName);
 		
@@ -222,6 +241,74 @@ public class DB {
 		
 		db.update(fi);
 		
+	}
+	
+	public int getTotalNumberOfVotes(String dataBaseName) {
+		createDatabaseInstance(dataBaseName);
+		boolean outOfBounds = false;
+		int i = 0;
+		int voteCounting = 0;
+		FileItem fileItem;
+		try {
+			while (!outOfBounds) {
+				if ( i != 0) {
+					fileItem = (FileItem) db.find(FileItem.class, "" + i);
+					voteCounting += fileItem.getVoteCounter();
+				}
+				i++;
+			}
+			
+		} catch (Exception e) {
+			outOfBounds = true;
+		}
+		return voteCounting;
+	}
+
+	public String getWinningItem(String dataBaseName) {
+		createDatabaseInstance(dataBaseName);
+		boolean outOfBounds = false;
+		int i = 0;
+		int winnigItemVoteCounting = 0;
+		int itemVoteCounting = 0;
+		String winnigItemName = "";
+		FileItem fileItem;
+		try {
+			while (!outOfBounds) {
+				if ( i != 0) {
+					fileItem = (FileItem) db.find(FileItem.class, "" + i);
+					itemVoteCounting = fileItem.getVoteCounter();
+					if (winnigItemVoteCounting < itemVoteCounting) {
+						winnigItemVoteCounting = itemVoteCounting;
+						winnigItemName = fileItem.getName();
+					}
+				}
+				i++;
+			}
+		} catch (Exception e) {
+			outOfBounds = true;
+		}
+		return winnigItemName;
+	}
+	
+	public String getItemName(String dataBaseName, String id) {
+		createDatabaseInstance(dataBaseName);
+		boolean outOfBounds = false;
+		int i = 0;
+		FileItem fileItem;
+		try {
+			while (!outOfBounds) {
+				if ( i != 0) {
+					fileItem = (FileItem) db.find(FileItem.class, "" + i);
+					if (fileItem.get_id().equals(id)) {
+						return fileItem.getName();
+					}
+				}
+				i++;
+			}
+		} catch (Exception e) {
+			outOfBounds = true;
+		}
+		return null;
 	}
 	
 }
