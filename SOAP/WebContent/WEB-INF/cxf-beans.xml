@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+	<jaxws:endpoint xmlns:tns="http://test/" id="datenowrmi"
+		implementor="com.ulht.cd.project.rmi.DateNowRMI"
+		wsdlLocation="wsdl/datenowrmi.wsdl" endpointName="tns:DateNowRMIPort"
+		serviceName="tns:DateNowRMIService" address="/DateNowRMIPort">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+	<jaxws:endpoint xmlns:tns="http://rmi.project.ulht.com/"
+		id="cenas" implementor="com.ulht.project.rmi.Cenas"
+		wsdlLocation="wsdl/cenas.wsdl" endpointName="tns:CenasPort"
+		serviceName="tns:CenasService" address="/CenasPort">
+		<jaxws:features>
+			<bean class="org.apache.cxf.feature.LoggingFeature" />
+		</jaxws:features>
+	</jaxws:endpoint>
+</beans>
