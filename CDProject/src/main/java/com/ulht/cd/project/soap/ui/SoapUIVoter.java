@@ -1,21 +1,31 @@
-package maven.example.cdproject.soap;
+package com.ulht.cd.project.soap.ui;
 
 import java.util.Scanner;
-import maven.example.cdproject.db.DB;
 
-public class SoapUiAdmin {
-	
+import com.ulht.cd.project.db.DB;
+
+public class SoapUIVoter {
+
 	private static Scanner scanner;
 	private static int option = -1;
 	private static DB db;
 	private static String dataBaseName = "test_database";
+	private static int votingItemId = 0;
+	private static String votingItemName = "";
 	
 	public static void main(String[] args) throws Exception {
 		
 		openConnection();
 		
-		do {
+		start();
 		
+		closeConnection();
+		
+	}
+	
+	private static void start() {
+		do {
+			
 			showMenu();
 		
 			getOption();
@@ -25,9 +35,6 @@ public class SoapUiAdmin {
 //			System.err.println(option);
 			
 		} while(option != 99);
-		
-		closeConnection();
-		
 	}
 	
 	private static void workOption() {
@@ -40,31 +47,16 @@ public class SoapUiAdmin {
 				
 			}break;
 			case 3: {
-				
+				getVote();
 			}break;
 			case 4: {
-				
+				System.out.println(db.getTotalNumberOfVotes(dataBaseName) + "\r\n");
 			}break;
 			case 5: {
-				System.out.println(db.getTotalNumberOfVotes(dataBaseName));
+				
 			}break;
 			case 6: {
-				
-			}break;
-			case 7: {
-				System.out.println(db.getWinningItem(dataBaseName));
-			}break;
-			case 8: {
-				
-			}break;
-			case 9: {
-				
-			}break;
-			case 10: {
-				
-			}break;
-			case 11: {
-				
+				System.out.println(db.getWinningItem(dataBaseName) + "\r\n");
 			}break;
 			case 99: 
 			case 0: {
@@ -79,7 +71,31 @@ public class SoapUiAdmin {
 			}
 		}
 	}
-		
+	
+	private static void getVote() {
+		System.out.print("Voto? ");
+		votingItemId = scanner.nextInt();
+		getVotingItemName();
+		if (votingItemName != null) {
+			System.out.print("Confirma voto em " + votingItemName + " (S/N)? ");
+			scanner.nextLine();
+			if (scanner.nextLine().equalsIgnoreCase("s")) {
+				System.out.println("OK, Votou em " + votingItemName + "\r\n");
+				vote();
+			}
+		} else {
+			System.out.println("Não existe nenhum item com o id " + votingItemId + "\r\n");
+		}
+	}
+	
+	private static void getVotingItemName() {
+		votingItemName = db.getItemName(dataBaseName, String.valueOf(votingItemId));
+	}
+	
+	private static void vote() {
+		db.voteItem(dataBaseName, String.valueOf(votingItemId));
+	}
+	
 	private static void getOption() {
 		option = scanner.nextInt();
 	}
@@ -103,16 +119,11 @@ public class SoapUiAdmin {
 					+ "MENU ADMINISTRADOR\r\n"
 					+ "0 - Menu inicial\r\n"
 					+ "1 - Listar itens em votação\r\n"
-					+ "2 - Início da sessão\r\n"
-					+ "3 - Duração da sessão\r\n"
-					+ "4 - Tempo restante de votação\r\n"
-					+ "5 - Número total de votos\r\n"
-					+ "6 - Listar resultados de votação (%)\r\n"
-					+ "7 - Item ganhador\r\n"
-					+ "8 - listar utilizadores registados\r\n"
-					+ "9 - listar utilizadores da sessão\r\n"
-					+ "10 - associar utilizador\r\n"
-					+ "11 - remover utilizador\r\n"
+					+ "2 - Tempo restante de votação\r\n"
+					+ "3 - Votar\r\n"
+					+ "4 - Número total de votos\r\n"
+					+ "5 - Listar resultados de votação (%)\r\n"
+					+ "6 - Item ganhador\r\n"
 					+ "99 - Sair\r\n"
 					+ "\r\n"
 					+ "Opção? "

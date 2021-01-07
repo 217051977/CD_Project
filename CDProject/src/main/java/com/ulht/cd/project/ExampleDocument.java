@@ -1,4 +1,4 @@
-package maven.example.cdproject;
+package com.ulht.cd.project;
 
 // A Java type that can be serialized to JSON
 public class ExampleDocument {

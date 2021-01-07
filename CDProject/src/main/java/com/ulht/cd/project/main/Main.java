@@ -1,4 +1,4 @@
-package maven.example.cdproject.main;
+package com.ulht.cd.project.main;
 
 //import maven.example.cdproject.db.DB;
 

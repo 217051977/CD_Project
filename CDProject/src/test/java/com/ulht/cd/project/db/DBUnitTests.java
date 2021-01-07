@@ -1,12 +1,10 @@
-package maven.example.cdproject.testes;
+package com.ulht.cd.project.db;
 
 //import static org.junit.Assert.assertEquals;
 
 import org.junit.Test;
 
-import maven.example.cdproject.db.DB;
-import maven.example.cdproject.db.FileManager.FileItem;
-//import maven.example.cdproject.db.FileManager.FileResume;
+import com.ulht.cd.project.db.FileManager.FileItem;
 
 public class DBUnitTests {
 

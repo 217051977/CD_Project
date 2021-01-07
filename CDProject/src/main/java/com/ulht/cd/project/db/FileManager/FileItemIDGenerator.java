@@ -1,4 +1,4 @@
-package maven.example.cdproject.db.FileManager;
+package com.ulht.cd.project.db.FileManager;
 
 public final class FileItemIDGenerator {
 	

@@ -1,4 +1,4 @@
-package maven.example.cdproject;
+package com.ulht.cd.project;
 
 
 import java.io.IOException;

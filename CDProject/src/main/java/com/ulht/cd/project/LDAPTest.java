@@ -1,13 +1,13 @@
-package maven.example.cdproject;
+package com.ulht.cd.project;
 
 public class LDAPTest {
 	
 	public static void main(String[] args) throws Exception {
 
-		String user_id = "2233322"; // user id
+		String user_id = "101010"; // user id
 		String user_pwd = "qwerty"; // user password
-		String base = "ou=dev,dc=example,dc=com";
-		String user_rdn ="ou=people"; // user RDN (relative distinguished names)
+		String base = "ou=prod,dc=example,dc=com";
+		String user_rdn ="ou=admin"; // user RDN (relative distinguished names)
 		String dn = "uid=" + user_id + "," + user_rdn + "," + base; // DN (distinguished name)
 		
 		// validate dn

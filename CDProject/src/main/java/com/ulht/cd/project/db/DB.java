@@ -1,4 +1,4 @@
-package maven.example.cdproject.db;
+package com.ulht.cd.project.db;
 
 import java.net.URL;
 //import java.time.Instant;
@@ -8,9 +8,8 @@ import com.cloudant.client.api.CloudantClient;
 import com.cloudant.client.api.Database;
 import com.cloudant.client.org.lightcouch.NoDocumentException;
 import com.cloudant.client.org.lightcouch.PreconditionFailedException;
-
-import maven.example.cdproject.db.FileManager.FileItem;
-import maven.example.cdproject.db.FileManager.FileResume;
+import com.ulht.cd.project.db.FileManager.FileItem;
+import com.ulht.cd.project.db.FileManager.FileResume;
 
 public class DB {
 
