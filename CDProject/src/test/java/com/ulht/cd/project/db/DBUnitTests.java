@@ -1,15 +1,34 @@
 package com.ulht.cd.project.db;
 
-//import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
+import org.junit.After;
+import org.junit.Before;
+import org.junit.BeforeClass;
 import org.junit.Test;
 
 import com.ulht.cd.project.db.FileManager.FileItem;
+import com.ulht.cd.project.db.FileManager.FileResume;
 
 public class DBUnitTests {
+	
+	static String methodName = "";
+	
+	@BeforeClass
+	public static void showStartTestsMessage() {
+		System.out.println("Running the test class " + DBUnitTests.class.getSimpleName() + "\r\n");
+	}
+	
+	@Before
+	public void showStartMethodMessage() {		
+		System.out.print("\r\nStarting method ");
+	}
 
 	/*@Test
 	public void getClientDatabases() throws Exception {
+		
+		System.out.println(new Object() {}.getClass().getEnclosingMethod().getName());
+		
 		DB db = new DB();
 
 		System.err.println("GETTING DATABASES");
@@ -19,10 +38,13 @@ public class DBUnitTests {
 		db.printClientDatabases();
 
 		System.err.println("\nDONE");
-	}*/
+	}
 
-	/*@Test
+	@Test
 	public void deleteDatabase() throws Exception {
+		
+		System.out.println(new Object() {}.getClass().getEnclosingMethod().getName());
+		
 		DB db = new DB();
 
 		System.err.println("DELETING DATABASE \"test_database\"");
@@ -33,6 +55,9 @@ public class DBUnitTests {
 
 	@Test
 	public void createDatabase() throws Exception {
+		
+		System.out.println(new Object() {}.getClass().getEnclosingMethod().getName());
+		
 		DB db = new DB();
 
 		System.err.println("CREATING DATABASE \"test_database\"");
@@ -42,6 +67,9 @@ public class DBUnitTests {
 
 	@Test
 	public void createItemInDatabase() throws Exception {
+		
+		System.out.println(new Object() {}.getClass().getEnclosingMethod().getName());
+		
 		DB db = new DB();
 
 		System.err.println("DELETING DATABASE \"test_database\"");
@@ -55,10 +83,13 @@ public class DBUnitTests {
 		db.createItemInDatabase("test_database", new FileItem("ItemTest2"));
 		
 		System.err.println("\nDONE");
-	}*/
-
-	/*@Test
+	}
+	
+	@Test
 	public void createDatabaseWithItem() throws Exception {
+		
+		System.out.println(new Object() {}.getClass().getEnclosingMethod().getName());
+		
 		DB db = new DB();
 		
 		System.err.println("RESETING DATABASE \"test_database\"");
@@ -72,9 +103,9 @@ public class DBUnitTests {
 		db.createItemInDatabase("test_database", new FileItem("ItemTest2"));
 		
 		System.err.println("\nDONE");
-	}*/
+	}
 	
-	/*@Test
+	@Test
 	public void findFileItemResume() throws Exception {
 		
 		DB db = new DB();
@@ -91,9 +122,12 @@ public class DBUnitTests {
 		
 		System.err.println("\nDONE");
 	}
-	
-	/*@Test
+	*/
+	@Test
 	public void findFileItemMissingID() throws Exception {
+		methodName = new Object() {}.getClass().getEnclosingMethod().getName();
+		
+		System.out.println(methodName + "\r\n");
 		
 		DB db = new DB();
 		
@@ -123,10 +157,12 @@ public class DBUnitTests {
 		assertEquals("There is no File Item with the id \"3\"", null, fileItemId3);
 		
 		System.err.println("\nDONE");
-	}*/
+	}
 	
 	/*@Test
 	public void deleteFileItemFromDatabase() throws Exception {
+		
+		System.out.println(new Object() {}.getClass().getEnclosingMethod().getName());
 		
 		DB db = new DB();
 
@@ -142,10 +178,12 @@ public class DBUnitTests {
 		assertEquals("Not supose to find a File Resume as a File Item", null, fi);
 		
 		System.err.println("\nDONE");
-	}*/
-	
-	/*@Test
+	}
+
+	@Test
 	public void deleteFileItemFromDatabase() throws Exception {
+		
+		System.out.println(new Object() {}.getClass().getEnclosingMethod().getName());
 		
 		DB db = new DB();
 
@@ -170,6 +208,11 @@ public class DBUnitTests {
 	
 	@Test
 	public void vote() throws Exception {
+		
+		methodName = new Object() {}.getClass().getEnclosingMethod().getName();
+		
+		System.out.println(methodName + "\r\n");
+		
 		DB db = new DB();
 
 		System.err.println("RESETING DATABASE \"test_database\"");
@@ -189,6 +232,11 @@ public class DBUnitTests {
 		db.voteItemByName("test_database", "ItemTest2");
 		
 		System.err.println("\nDONE");
+	}
+
+	@After
+	public void showEndMethodMessage() {		
+		System.out.print("Method " + methodName + " has ended");
 	}
 	
 }

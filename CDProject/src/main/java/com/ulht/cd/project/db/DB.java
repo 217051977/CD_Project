@@ -17,7 +17,7 @@ public class DB {
 	private static CloudantClient client;
 	private Database db;
 	
-	private String localUrl = "http://localhost:5984";
+	private String localUrl = "http://26.215.237.218:5984"/*"http://26.215.237.218:5984"*/;
 	private String localUsername = "admin";
 	private String localPassword = "admin";
 	

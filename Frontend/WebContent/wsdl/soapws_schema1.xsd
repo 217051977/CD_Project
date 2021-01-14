@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://rmi.project.cd.ulht.com/" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://rmi.project.cd.ulht.com/">
+  <xs:element name="printDate" type="tns:printDate"/>
+  <xs:element name="printDateResponse" type="tns:printDateResponse"/>
+  <xs:complexType name="printDate">
+    <xs:sequence/>
+  </xs:complexType>
+  <xs:complexType name="printDateResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="Exception" type="tns:Exception"/>
+  <xs:complexType name="Exception">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="message" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

@@ -8,6 +8,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 
 import org.w3c.dom.Document;
+import org.w3c.dom.NodeList;
 import org.xml.sax.InputSource;
 import org.xml.sax.SAXException;
 
@@ -15,7 +16,7 @@ public class XmlFileParser {
 	public XmlFileParser() {
 		
 	}
-	public static Document parseXmlFile(String in) {
+	private Document parseXmlFile(String in) {
         try {
             DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
             DocumentBuilder db = dbf.newDocumentBuilder();
@@ -29,4 +30,10 @@ public class XmlFileParser {
             throw new RuntimeException(e);
         }
     }
+	
+	public String getWebServiceResponse(String httpConnectionResponse, String functionName) {
+		Document doc = parseXmlFile(httpConnectionResponse);
+		NodeList nodeList = doc.getElementsByTagName("ns2:" + functionName + "Response");
+		return nodeList.item(0).getTextContent();
+	}
 }
