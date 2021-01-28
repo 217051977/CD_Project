@@ -32,12 +32,21 @@ public class SoapUiAdmin {
 	}
 	
 	private static void workOption() {
+		
+		Scanner sc = new Scanner (System.in);
 		switch(option) {
 			case 1: {
 				db.getVotingItems(dataBaseName);
 				System.out.println();
 			}break;
 			case 2: {
+				System.out.println("Indique o Nome do Iten a adicionar: ");
+				String nomeIten = sc.nextLine();
+				System.out.println("Indique o tempo de votação do Iten: ");
+				int timeTotal = Integer.parseInt(sc.nextLine());
+				Object obj = new FileItem(nomeIten,timeTotal);
+				//db.createItemInDatabase(, nomeIten);
+				
 				
 			}break;
 			case 3: {

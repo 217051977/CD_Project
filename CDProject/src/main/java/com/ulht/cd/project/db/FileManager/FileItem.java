@@ -4,10 +4,20 @@ public class FileItem extends FileBase {
 
 	private String name;
 	private int voteCounter;
+	private int totalTime;
+	private int timeLeft;
+	private boolean active;
 	
 	public FileItem(String name) {
 		this.name = name;
 		this.voteCounter = 0;
+	}
+	
+	public FileItem(String name, int totalTime) {
+		this.name = name;
+		this.totalTime = totalTime;
+		this.voteCounter = 0;
+		this.active = false;
 	}
 
 	public int getVoteCounter() {
