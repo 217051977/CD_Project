@@ -1,4 +1,4 @@
-package com.ulht.cd.project.soap.connection;
+package com.ulht.cd.project.rmi;
 
 import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
